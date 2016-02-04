@@ -1,0 +1,29 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+version = '0.1.0'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile 'javax.servlet:jstl:1.2'
+    compile 'log4j:log4j:1.2.17'
+    compile 'org.slf4j:slf4j-simple:1.7.14'
+    compile 'org.springframework:spring-context:4.2.4.RELEASE'
+    compile 'org.springframework:spring-context-support:4.2.4.RELEASE'
+    compile 'org.springframework:spring-core:4.2.4.RELEASE'
+    compile 'org.springframework:spring-web:4.2.4.RELEASE'
+    compile 'org.springframework:spring-webmvc:4.2.4.RELEASE'
+    compile 'org.springframework:spring-jdbc:4.2.4.RELEASE'
+    compile 'org.springframework:spring-orm:4.2.4.RELEASE'
+    compile 'org.springframework:spring-tx:4.2.4.RELEASE'
+    compile 'org.apache.tiles:tiles-extras:3.0.5'
+    compile 'org.apache.tiles:tiles-jsp:3.0.5'
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}

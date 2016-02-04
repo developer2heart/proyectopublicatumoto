@@ -1,0 +1,310 @@
+@import "nib/*"
+@import "nib/vendor"
+vendor-preixes = o ms moz webkit official
+@import "nib/gradients"
+
+/**
+ * Estilos customisados de publicatumoto
+ * @Author Rafael Naranjo
+ * @Descripcion: Estilos realizados a medida para pagina publicatumoto.com
+ */
+// Estilos utiles
+.col-center
+  float none
+  margin 0 auto
+.elmt--novisible
+  display none
+
+.ctd__div--mobile
+  display none
+
+@media (max-width: 500px)
+  .ctd__div--mobile
+    display block
+  .ctd__div--nomobile
+    display none
+
+// Estilos publicidad lateral
+.lateral_ads--left
+  position absolute
+  top 35%
+  left 0
+
+.lateral_ads--right
+  position absolute
+  top 35%
+  right 0
+
+// Custom Bootstrap Framework
+@media (min-width: 1200px)
+  .container
+    width 990px
+    padding-right 0
+    padding-left 0
+    box-shadow -2px 0 8px #868686,2px 0 8px #868686
+
+/**
+ * Header style
+ */
+
+.header
+  display flex
+  flex-flow row wrap
+  justify-content flex-start
+  align-items center
+  width 100%
+  background-color #CDCDCD
+
+  .header__logo
+    width 25%
+
+    img
+      width 100%
+
+  .header__searchInput
+    width 25%
+    .input-group
+      margin 0 auto
+      width 75%
+
+  .header__navegacion
+    width 50%
+
+    nav
+      ul
+        margin 0
+        padding 0
+        li
+          ul
+            display: none
+
+@media (max-width: 500px)
+  .container
+    padding 0
+    margin 0
+  .header
+    display flex
+    flex-flow row wrap
+    justify-content flex-start
+    align-items center
+    width 100%
+    background-color #CDCDCD
+    .header__logo
+      width 40%
+
+      img
+        width 100%
+
+    .header__searchInput
+      width 50%
+      margin 0 auto
+      .input-group
+        margin 0 auto
+        width 90%
+
+      nav
+        ul
+          margin 0
+          padding 0
+          li
+            ul
+              display: none
+
+/**
+ * Content banner style
+ */
+.content__banner
+  position relative
+  width 100%
+  height 450px
+  overflow hidden
+
+  .searchform
+    &__bikes
+      background-color rgba(255,255,255,0.8)
+      position absolute
+      border-radius 6px
+      width 60%
+      top 14%
+      left 3%
+      z-index 4
+      .title
+        padding-left 15px
+      .fila
+        display flex
+        flex-flow row wrap
+        padding 0 15px
+        &--dosItems
+          display flex
+          flex-flow row wrap
+          padding 0 15px
+          .input-grupo
+            padding 10px 5px
+            border-bottom dashed 1px black
+            width 50%
+            label
+              display block
+            select
+              height 24px
+              width 100%
+        .input-grupo
+          padding 10px 5px
+          border-bottom dashed 1px black
+          width 33%
+          label
+            display block
+          select
+            height 24px
+            width 100%
+    &__ctnbtn
+      background-color #adadad
+      padding 10px 15px
+      border-radius 0 0 6px 6px
+
+  .sliderBikesSD
+    position absolute
+    top 0
+    left 0
+    z-index 2
+    img
+      display none
+      position absolute;
+
+/**
+ * Estilos Marcas Servicios
+ */
+
+.text
+  &--oswald
+    font-family "Oswald"
+    font-style italic
+  &--violeta
+    color #A4030B
+.marcasServicios
+  &__ctnTitle
+    width 100%
+    margin 10px 0
+    border-bottom: solid 1px #a4030b;
+    display flex
+    align-items center
+    flex-flow row wrap
+    h2
+      margin 0
+  &__ctndlogos
+    display flex
+    flex-flow row nowrap
+    align-items center
+    width 100%
+    margin 20px 0
+    div
+      width 14%
+      text-align center
+  &__ctndServices
+    color #fff
+    background url("../img/serviciosbk.jpg") no-repeat
+    background-size cover
+    display flex
+    flex-flow row nowrap
+    width 100%
+    padding 40px 20px
+    .columnaOne
+      border-right 1px solid #fff
+      width 25%
+      ul
+        li
+          margin-bottom 30px
+          text-transform uppercase
+          cursor pointer
+          img
+            padding-right 10px
+            margin-right 10px
+            border-right 1px solid #fff
+    .columnaDos
+      width 45%
+      padding 0 20px
+      border-right 1px solid #fff
+    .columnaTres
+      width 30%
+      padding 0 20px
+      ul
+        margin 0
+        padding 0
+        padding-left 20px
+
+.publicaciones
+  &__ctnd-title
+    color #002C86
+    border-bottom 1px solid #002C86
+    display flex
+    flex-flow row nowrap
+    width 100%
+    align-items center
+    img
+      width 28px
+      height 28px
+  &__img
+    padding 10px
+    img
+      width 100%
+    &--principal
+      padding 10px 10px
+      width 100%
+      img
+        width 100%
+  &__info
+    padding 10px
+.news
+  padding 20px
+  &__image
+    width 100%
+.btnn
+  display inline-block
+  padding 6px 12px
+  margin-bottom 0
+  font-size 14px
+  font-weight 400
+  line-height 1.42857143
+  text-align center
+  white-space nowrap
+  vertical-align middle
+  cursor pointer
+  background-image none
+  border 1px solid transparent
+  border-radius 4px
+  &--yellow
+    color #fff
+    box-shadow inset 0 1px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,.075)
+    background-image linear-gradient(to bottom, #F5B335 0, #F38700 100%)
+    background-color #F38700
+    border-color #F38700
+.wrapper-contacto
+  &--backgrund
+    background url("../img/contacbk.jpg") no-repeat
+    background-size cover
+    background-position center
+.contacto
+  &__ctnd
+    padding 60px 0
+  &__background
+    color #fff
+    background-color rgba(0,0,0,.6)
+    float left
+    margin 0 5px
+  &__icono
+    padding-top 10px
+    padding-left 10px
+    width 100%
+.wrapper-footer
+  color white
+  &__ctnd
+    padding 40px 0
+    background-color #242424
+
+.noticias
+  &__ctnd-title
+    color #DB8700
+    border-bottom 1px solid #DB8700
+    display flex
+    flex-flow row nowrap
+    width 100%
+    align-items center

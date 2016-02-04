@@ -1,0 +1,18 @@
+# Created by .ignore support plugin (hsz.mobi)
+## General folders  ##
+.idea
+build
+classes
+publicatumoto.iml
+
+## Folders ignore  ##
+src/main/webapp/resources/libs
+src/main/webapp/resources/node_modules
+src/main/webapp/resources/fonts
+
+## Style folders ##
+src/main/webapp/resources/css/app.css
+src/main/webapp/resources/css/style.css
+
+## Javascripts folders ##
+src/main/webapp/resources/js/app.js
