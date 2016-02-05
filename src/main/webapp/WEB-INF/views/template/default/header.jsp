@@ -85,6 +85,7 @@
                         </ul>
                     </li>
                     <li><a href="#"><fmt:message key="page.index.nav.menu.contacto"/></a></li>
+                    <li><a class="btn btn--yellow" href="#"><fmt:message key="page.index.nav.menu.vendetumoto"/></a></li>
                 </ul>
             </nav>
         </div>
