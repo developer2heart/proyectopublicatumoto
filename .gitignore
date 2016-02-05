@@ -4,6 +4,7 @@
 build
 classes
 publicatumoto.iml
+publicatumoto.com.iml
 
 ## Folders ignore  ##
 src/main/webapp/resources/libs
