@@ -23,6 +23,7 @@ public class User implements UserDetails {
     @Indexed(unique = true)
     private String username;
     private String password;
+    private String correo;
     private List<GrantedAuthority> authorities;
     private boolean enabled = true;
     private boolean credentialsNonExpired = false;
@@ -45,41 +46,36 @@ public class User implements UserDetails {
     public void setCreatedate(Date createdate) {this.createUserDate = createdate;}
     public Date getLastModified() {return lastModifiedUserDate;}
     public void setLastModified(Date lastModified) {this.lastModifiedUserDate = lastModified;}
+    public String getCorreo() {return correo;}
+    public void setCorreo(String correo) {this.correo = correo;}
 
     public String getId() {
         return id;
     }
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return this.authorities;
     }
-
     @Override
     public String getPassword() {
         return this.password;
     }
-
     @Override
     public String getUsername() {
         return this.username;
     }
-
     @Override
     public boolean isAccountNonExpired() {
         return this.accountNonExpired;
     }
-
     @Override
     public boolean isAccountNonLocked() {
         return this.accountNonLocked;
     }
-
     @Override
     public boolean isCredentialsNonExpired() {
         return this.credentialsNonExpired;
     }
-
     @Override
     public boolean isEnabled() {
         return this.enabled;

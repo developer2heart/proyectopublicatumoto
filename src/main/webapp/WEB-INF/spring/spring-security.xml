@@ -10,6 +10,10 @@
         <security:intercept-url pattern="/resources/**" access="permitAll"/>
         <security:intercept-url pattern="/" access="permitAll"/>
         <security:intercept-url pattern="/home" access="permitAll"/>
+        <security:intercept-url pattern="/usuario/**" access="hasRole('ROLE_SUPERADMIN')"/>
+        <security:intercept-url pattern="/usuario/save" access="permitAll"/>
+        <security:intercept-url pattern="/user/**" access="hasRole('ROLE_SUPERADMIN')"/>
+        <security:intercept-url pattern="/user/save" access="permitAll"/>
         <security:csrf disabled="true"/>
         <security:form-login
                 login-page="/"

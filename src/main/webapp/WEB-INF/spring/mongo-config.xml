@@ -9,7 +9,7 @@
 
     <mongo:auditing/>
 
-    <bean id="mongo" class="org.springframework.data.mongodb.core.MongoClientFactoryBean">
+    <bean id="mongo" class="org.springframework.data.mongodb.core.MongoFactoryBean">
         <property name="host" value="${db.host}" />
     </bean>
 
