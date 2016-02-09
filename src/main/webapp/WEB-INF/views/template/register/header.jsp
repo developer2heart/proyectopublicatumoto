@@ -4,30 +4,6 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <!-- ##################### -->
-<!-- Banner Publicidad LEFT AND RIGHT -->
-<!-- ##################### -->
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<div class="lateral_ads--left ctd__div--nomobile">
-    <ins class="adsbygoogle"
-         style="text-align:center;display:inline-block;width:160px;height:600px"
-         data-ad-client="ca-pub-8389681459154753"
-         data-ad-slot="9522152969"></ins>
-</div>
-<script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<div class="lateral_ads--right ctd__div--nomobile">
-    <ins class="adsbygoogle"
-         style="text-align:center;display:inline-block;width:160px;height:600px"
-         data-ad-client="ca-pub-8389681459154753"
-         data-ad-slot="9522152969"></ins>
-</div>
-<script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<!-- ##################### -->
 <!-- Banner Publicidad TOP -->
 <!-- ##################### -->
 

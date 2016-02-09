@@ -1,7 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
+<%@ taglib prefix="tilesx" uri="http://tiles.apache.org/tags-tiles-extras" %>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -9,7 +11,7 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js" data-ng-app> <!--<![endif]-->
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <c:set var="titlevalue">
         <tiles:insertAttribute name="title" ignore="true" />
@@ -21,8 +23,14 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link href="<c:url value="/resources/css/app.css"/>" rel="stylesheet" type="text/css" />
-    <link href="<c:url value="/resources/css/style.css"/>" rel="stylesheet" type="text/css" />
+    <c:url value="/resources" var="urlstatic"/>
 
+    <tilesx:useAttribute id="listcss" name="itemscss" classname="java.util.List"/>
+    <c:forEach var="file" items="${listcss}">
+        <c:if test="${not empty file}">
+            <link href="${urlstatic}${file}" rel="stylesheet" type="text/css" />
+        </c:if>
+    </c:forEach>
 </head>
 <body>
 <!--[if lt IE 7]>
@@ -36,6 +44,7 @@
     <tiles:insertAttribute name="body"/>
     <tiles:insertAttribute name="footer"/>
 <!-- Add your site or application content here -->
+<!-- ###################### -->
 
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -56,11 +65,20 @@
     ga('send', 'pageview');
 </script>
 
+<c:url value="/" var="urlsbase"/>
+<script type="text/javascript">
+    var urlbase = ${urlsbase};
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 
 <script src="<c:url value="/resources/js/app.js"/>"></script>
-<script src="<c:url value="/resources/js/main.js"/>"></script>
+<tilesx:useAttribute id="listjs" name="itemsjs" classname="java.util.List"/>
+<c:forEach var="file" items="${listjs}">
+    <c:if test="${not empty file}">
+        <script src="${urlstatic}${file}"></script>
+    </c:if>
+</c:forEach>
 
 </body>
 </html>

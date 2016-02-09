@@ -2,9 +2,8 @@ package com.twoheart.user.web;
 
 import com.twoheart.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.MessageSource;
-import org.springframework.context.support.AbstractMessageSource;
-import org.springframework.context.support.MessageSourceResourceBundle;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +19,6 @@ import java.util.Map;
  * Created by Usuario on 05/02/2016.
  */
 @Controller
-@RequestMapping(value = {"/usuario","/user"})
 public class UserController {
 
 
@@ -31,9 +29,18 @@ public class UserController {
         this.userService = userService;
     }
 
-    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    @RequestMapping(value = {"/usuario/","/user/"}, method = RequestMethod.POST)
+    public @ResponseBody Map<String, Object> saveUser(Model model)throws Exception{
+        Map<String, Object> respuesta = new HashMap<>();
+        respuesta.put("status", 0);
+        respuesta.put("message", "Hola a todos");
+        return respuesta;
+    }
+
+    @Secured({"ROLE_SUPERADMIN","ROLE_USER","ROLE_ADMIN"})
+    @RequestMapping(value = {"/usuario/${id}","/user/${id}"}, method = RequestMethod.DELETE)
     @ResponseBody
-    public Map<String, Object> saveUser(Model model, HttpServletRequest request, HttpServletResponse response)throws Exception{
+    public Map<String, Object> deleteUser(Model model, HttpServletRequest request, HttpServletResponse response)throws Exception{
         Map<String, Object> respuesta = new HashMap<>();
         respuesta.put("status",0);
         respuesta.put("message", "");

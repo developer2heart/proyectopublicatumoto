@@ -14,9 +14,15 @@ public class IndexController {
 
     private static final Logger logger = Logger.getLogger(IndexController.class);
 
-    @RequestMapping(value={"/","/home"}, method = RequestMethod.GET)
+    @RequestMapping(value={"/","/home.do"}, method = RequestMethod.GET)
     public String indexView(Model model)throws Exception {
         logger.info("\n <-###############-> \n Page Index: rute{'/','/home'} iniciado correctamente \n <-###############->");
         return "index";
+    }
+
+    @RequestMapping(value={"/login.do","/iniciar_sesion.do"}, method = RequestMethod.GET)
+    public String loginView(Model model)throws Exception {
+        logger.info("\n <-###############-> \n Page Login: rute{'/login.do','/iniciar_sesion.do'} iniciado correctamente \n <-###############->");
+        return "login.home";
     }
 }

@@ -49,7 +49,7 @@ public class CustomSucessHandler  extends SimpleUrlAuthenticationSuccessHandler{
         }
 
         if (isSuperAdmin(roles)) {
-            url = "/dashboard";
+            url = "/plataforma/";
         } else {
             url = "/";
         }

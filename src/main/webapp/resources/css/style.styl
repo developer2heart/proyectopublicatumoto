@@ -20,10 +20,16 @@ vendor-preixes = o ms moz webkit official
 
 .btn
   &--yellow
+    color: #fff
     box-shadow inset 0 1px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,.075)
     background-image linear-gradient(to bottom, #F5B335 0, #F38700 100%)
     background-color #F38700
     border-color #F38700
+    &:hover
+      color: #fff
+      background-image linear-gradient(to bottom, #e9a935 0, #e27600 100%)
+      background-color #e47c00
+
 
 @media (max-width: 500px)
   .ctd__div--mobile
@@ -315,3 +321,7 @@ vendor-preixes = o ms moz webkit official
     flex-flow row nowrap
     width 100%
     align-items center
+
+.register
+  &__ctnd
+    margin 60px auto
