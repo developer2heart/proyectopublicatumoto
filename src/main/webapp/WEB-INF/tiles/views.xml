@@ -22,12 +22,12 @@
             <add-attribute value="/css/style.css"/>
         </put-list-attribute>
         <put-list-attribute name="itemsjs">
-            <add-attribute value="/js/main.js"/>
+            <add-attribute value="/js/register/register.js"/>
         </put-list-attribute>
     </definition>
 
     <definition name="login.home" extends="base">
-        <put-attribute name="title" value="page.register.home.title" />
+        <put-attribute name="title" value="page.login.home.title" />
         <put-attribute name="header" value="/WEB-INF/views/template/register/header.jsp"/>
         <put-attribute name="body" value="/WEB-INF/views/login.jsp" />
         <put-list-attribute name="itemscss">

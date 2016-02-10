@@ -5,23 +5,24 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-4 col-center register__ctnd">
+        <div class="col-md-5 col-center register__ctnd">
+            <h2><fmt:message key="page.login.home.title"/></h2>
             <c:url value="/j_spring_security_check" var="urlLogin"/>
             <form action="${urlLogin}" method="post" novalidate>
                 <div class="form-group">
-                    <label for="inptMail">Correo:</label>
-                    <input type="email" class="form-control" id="inptMail" name="j_id" placeholder="Email">
+                    <label for="inptMail"><fmt:message key="page.login.home.form.inpt.mail"/>:</label>
+                    <input type="email" class="form-control" id="inptMail" name="j_id" placeholder="<fmt:message key="page.login.home.form.inpt.mail.placeholder"/>">
                 </div>
                 <div class="form-group">
-                    <label for="inptPass">Contraseña:</label>
-                    <input type="password" class="form-control" id="inptPass" name="j_pass" placeholder="Email">
+                    <label for="inptPass"><fmt:message key="page.login.home.form.inpt.pass"/>:</label>
+                    <input type="password" class="form-control" id="inptPass" name="j_pass" placeholder="<fmt:message key="page.login.home.form.inpt.pass.placeholder"/>">
                 </div>
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox"> Recordar me
+                        <input type="checkbox"> <fmt:message key="page.login.home.form.chkx.rememberme"/>
                     </label>
                     <label>
-                        <a href="#">¿Olvidaste tu contraseña?</a>
+                        <a href="#"><fmt:message key="page.login.home.form.recordarcontrasena"/></a>
                     </label>
                 </div>
 
@@ -31,8 +32,8 @@
                     </div>
                 </c:if>
 
-                <button type="submit" class="btn btn-primary">Ingresar</button>
-                <a href="<c:url value="/registro/"/>" class="btn btn-info">Registrarme</a>
+                <button type="submit" class="btn btn-primary"><fmt:message key="page.login.home.form.btn.ingresar"/></button>
+                <a href="<c:url value="/registro/"/>" class="btn btn-info"><fmt:message key="page.login.home.form.btn.registrarme"/></a>
             </form>
         </div>
 
