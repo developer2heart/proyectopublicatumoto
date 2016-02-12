@@ -88,10 +88,10 @@
                     <li><a href="#"><fmt:message key="page.index.nav.menu.contacto"/></a></li>
                     <sec:authorize access="isAuthenticated()" var="isAuthen"/>
                     <c:if test="${!isAuthen}">
-                        <li><a class="btn btn--yellow" href="<c:url value="/iniciar_sesion.do"/>"><fmt:message key="page.index.nav.menu.vendetumoto"/></a></li>
+                        <li><a class="btn btn--yellow text--oswald-nonitalic" href="<c:url value="/iniciar_sesion.do"/>"><fmt:message key="page.index.nav.menu.vendetumoto"/></a></li>
                     </c:if>
                     <c:if test="${isAuthen}">
-                        <li><a class="" href="<c:url value="/logout"/>">Salir</a></li>
+                        <li><a class="text--oswald-nonitalic" href="<c:url value="/logout"/>">Salir</a></li>
                     </c:if>
                 </ul>
             </nav>

@@ -22,6 +22,7 @@
             <add-attribute value="/css/style.css"/>
         </put-list-attribute>
         <put-list-attribute name="itemsjs">
+            <add-attribute value="/js/app/module.js"/>
             <add-attribute value="/js/register/register.js"/>
         </put-list-attribute>
     </definition>

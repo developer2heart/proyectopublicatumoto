@@ -4,36 +4,40 @@
 (function($){
     var app={
         init: function (){
-            register.init();
         }
     };
-
-    var register={
-        init: function () {
-
-            $.getJSON(urlbase+"/resources/js/colombia/colombia.json")
-                .done(function (data) {
-                    $.each(data, function (i, elm) {
-                        console.log(elm.departamento);
-                    });
-                    //console.log();
-                })
-                .fail(function () {
-
-            });
-
-
-            //this.elements();
-        },
-        elements: function () {
-        },
-        actions: function () {
-
-        }
-    }
 
     return{
         init:app.init()
     };
 
 })(jQuery);
+
+publicatumoto.factory('MotoService', function ($http) {
+    var ubication = {
+        getData: function () {
+            var req = {
+                method: 'GET',
+                url: urlbase+"/resources/js/colombia/colombia.json"
+            };
+            var info = $http(req).then(function (response) {
+                return response.data;
+            });
+            return info;
+        }
+    }
+    return ubication;
+});
+publicatumoto.controller('registroCtrlr',['$scope','MotoService', function ($scope,ms) {
+    ms.getData().then(function (departamentos) {
+        $scope.departamentos = departamentos;
+    });
+    $scope.stlchangeDepartamento= function ( id) {
+        $scope.ciudades = [];
+        $scope.ciudades = $scope.departamentos[id].ciudades;
+    };
+
+    $scope.nextstep = function () {
+        console.log($scope.moto);
+    };
+}]);
