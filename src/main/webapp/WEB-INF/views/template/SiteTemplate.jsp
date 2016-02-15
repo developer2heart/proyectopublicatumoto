@@ -31,6 +31,9 @@
             <link href="${urlstatic}${file}" rel="stylesheet" type="text/css" />
         </c:if>
     </c:forEach>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 </head>
 <body>
 <!--[if lt IE 7]>
@@ -69,8 +72,6 @@
 <script type="text/javascript">
     var urlbase = ${urlsbase};
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 
 <script src="<c:url value="/resources/js/app.js"/>"></script>
 <tilesx:useAttribute id="listjs" name="itemsjs" classname="java.util.List"/>

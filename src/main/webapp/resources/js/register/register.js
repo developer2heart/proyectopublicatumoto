@@ -38,6 +38,6 @@ publicatumoto.controller('registroCtrlr',['$scope','MotoService', function ($sco
     };
 
     $scope.nextstep = function () {
-        console.log($scope.moto);
+        $scope.steptDos = true;
     };
 }]);
