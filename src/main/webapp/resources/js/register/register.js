@@ -37,7 +37,4 @@ publicatumoto.controller('registroCtrlr',['$scope','MotoService', function ($sco
         $scope.ciudades = $scope.departamentos[id].ciudades;
     };
 
-    $scope.nextstep = function () {
-        $scope.steptDos = true;
-    };
 }]);
