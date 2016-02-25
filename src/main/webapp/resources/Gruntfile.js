@@ -64,5 +64,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-bower-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
 
+    grunt.registerTask('init',['copy','bower_concat','stylus']);
     grunt.registerTask('default',['watch']);
 };

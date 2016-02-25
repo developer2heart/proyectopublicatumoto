@@ -20,16 +20,16 @@ import java.util.Map;
 @Controller
 public class UserController {
 
-
-    @Autowired
     private UserService userService;
 
+    @Autowired
     public void setUserService(UserService userService) {
         this.userService = userService;
     }
 
     @RequestMapping(value = {"/usuario/","/user/"}, method = RequestMethod.POST)
-    public @ResponseBody Map<String, Object> saveUser(Model model)throws Exception{
+    @ResponseBody
+    public Map<String, Object> saveUser(Model model)throws Exception{
         Map<String, Object> respuesta = new HashMap<>();
         respuesta.put("status", 0);
         respuesta.put("message", "Hola a todos");
@@ -37,7 +37,7 @@ public class UserController {
         return respuesta;
     }
 
-    @Secured({"ROLE_SUPERADMIN","ROLE_USER","ROLE_ADMIN"})
+//    @Secured({"ROLE_SUPERADMIN","ROLE_USER","ROLE_ADMIN"})
     @RequestMapping(value = {"/usuario/${id}","/user/${id}"}, method = RequestMethod.DELETE)
     @ResponseBody
     public Map<String, Object> deleteUser(Model model, HttpServletRequest request, HttpServletResponse response)throws Exception{
